@@ -2,12 +2,41 @@
 
 	class qa_html_theme extends qa_html_theme_base
 	{	
+		
+		function nav_main_sub()
+		{
+			$this->output('<a class="qa-display-more-mobile">Menu</a>');
+			$this->nav('main'); 
+			$this->nav('sub');
+		}
+
+		function body_content()
+		{
+			$this->body_prefix();
+			$this->notices();
+			
+			$this->output('<div class="qa-body-wrapper">', '');
+
+			$this->widgets('full', 'top');
+			$this->header();
+			$this->widgets('full', 'high');
+			$this->main();
+			$this->sidepanel();
+			$this->widgets('full', 'low');
+			$this->footer();
+			$this->widgets('full', 'bottom');
+			
+			$this->output('</div> <!-- END body-wrapper -->');
+			
+			$this->body_suffix();
+		}
 
 		function head_custom() {
 			//canonical tags for other pages like question Cat and Unanswered Cat
 			qa_html_theme_base::head_custom();
+			$this->output('<meta name="viewport" content="width=device-width, initial-scale=1" />');
 			if ($this->template == "unanswered" || $this->template == "questions") {
-				$this->output('<link rel="canonical" href="'.qa_opt('site_url').$this->template.'"/>');
+				$this->output('<link rel="canonical" href="'.qa_opt('site_url').$this->template.'" />');
 			}
 			//some custom styles for my account page
 			if ($this->request == "account") {
@@ -42,6 +71,12 @@
 			$this->output('<div class="qa-footer">');
 			$this->footer_clear();
 			$this->output('</div> <!-- END qa-footer -->', '');
+			$this->output('<script>$(document).ready(function(){
+				$("a.qa-display-more-mobile").on("click", function(){
+					$(".qa-nav-main-item").show();
+					$(this).text("");
+				});
+			})</script>');
 		}		
 
 		function q_item_stats($q_item)
