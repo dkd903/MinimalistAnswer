@@ -502,6 +502,7 @@ h2#a_list_title {color: #666666; border-bottom: 4px solid #dddddd; margin-bottom
 	.qa-part-message-list .qa-message-item {margin: 5px 0;border-bottom: 1px dotted rgb(122, 122, 122);padding-bottom: 10px;}
 .qa-form-light-button-delete {background: url(images/ma_delete.png) no-repeat;border: 0;cursor: pointer;padding: 0 0 0 18px;margin-right: 6px;font-size: 12px;overflow: visible;width: 18px;}	
 a.qa-display-more-mobile{display:none;}
+a.qa-logo-link img {max-height: 55px;}
 
 /* Media queries */
 @media screen and (max-width: 720px) {
@@ -518,6 +519,7 @@ a.qa-display-more-mobile{display:none;}
 }
  
 @media screen and (max-width: 540px) {
+	a.qa-logo-link img { max-height: 32px; margin-top: 2px; }
 	.qa-part-form-profile {float: none; width: 530px;}
 	.qa-part-form-profile .qa-form-wide-table {width: 530px;}	
 	.qa-part-form-activity { float: none; margin-top: 15px; }
@@ -543,6 +545,7 @@ a.qa-display-more-mobile{display:none;}
 }
 
 @media screen and (max-width: 400px) {
+	a.qa-logo-link img { max-height: 32px; margin-top: 0px; }
 	.qa-part-form-profile {float: none; width: 390px;}
 	.qa-part-form-profile .qa-form-wide-table {width: 390px;}	
 	.qa-part-form-activity { float: none; margin-top: 15px; }
@@ -578,6 +581,7 @@ a.qa-display-more-mobile{display:none;}
 }
  
 @media screen and (max-width: 360px) {
+	a.qa-logo-link img { max-height: 32px; margin-top: 0px; }
 	.qa-part-form-profile {float: none; width: 350px;}
 	.qa-part-form-profile .qa-form-wide-table {width: 350px;}	
 	.qa-part-form-activity { float: none; margin-top: 15px; }
@@ -613,6 +617,7 @@ a.qa-display-more-mobile{display:none;}
 }
 
 @media screen and (max-width: 320px) {
+	a.qa-logo-link img { max-height: 32px; margin-top: 0px; }
 	.qa-part-form-profile {float: none; width: 310px;}
 	.qa-part-form-profile .qa-form-wide-table {width: 310px;}	
 	.qa-part-form-activity { float: none; margin-top: 15px; }
@@ -637,7 +642,7 @@ a.qa-display-more-mobile{display:none;}
 	.qa-search-field {width: 30px;}
 	.qa-a-item-main { float: none; width: 100%; display: block; }
 	.cke_editor_a_content {width: 280px;}
-	.qa-search-field { width: 232px; height: 19px; }
+	.qa-search-field { width: 225px; height: 19px; }
 	.qa-search { float: left; clear: right; margin-top: 3px; white-space: nowrap; margin-bottom: 3px; }
 	input.qa-search-button {padding: 2px 6px;}
 	.qa-a-item-buttons, .qa-q-view-buttons {text-align: left;}
